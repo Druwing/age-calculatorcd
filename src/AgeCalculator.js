@@ -46,7 +46,7 @@ const AgeCalculator = () => {
       <button onClick={calculateAge}>Calculate Age</button>
       {age.years > 0 && (
         <div className="result">
-          <p>You are <span>{age.years}</span> years, <span>{age.months}</span> months, and <span>{age.days}</span> days old.</p>
+          <p>You are <span>{age.years}</span> years, <span>{age.months}</span> months, and <span>{age.days}</span> days old, u old fart.</p>
         </div>
       )}
     </div>

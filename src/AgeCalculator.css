@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-image: url("C:\Users\juanv\age-calculatorcd\src\old-bearded-senior-man-with-calculator-and-bills-counting-euro-money-at-home-2J1WMW6.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ body {
   }
   
   .age-calculator {
-    background-color: #fff;
+    background-color: #fa6b6b;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -36,14 +36,14 @@ body {
   
   input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 5px;
+    border: 1px solid #a35454;
     border-radius: 5px;
     font-size: 16px;
   }
   
   button {
-    background-color: #007bff;
+    background-color: #3295ff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -54,7 +54,7 @@ body {
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #063a71;
   }
   
   .result {
@@ -65,5 +65,5 @@ body {
   
   .result span {
     font-weight: bold;
-    color: #007bff;
+    color: #282b2e;
   }
