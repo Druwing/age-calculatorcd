@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const AgeCalculator = () => {
   const [birthDate, setBirthDate] = useState('');
-  const [age, setAge] = useState({ years: 0, months: 0, days: 0 });
+  const [age, setAge] = useState(null);
 
   const calculateAge = () => {
     const today = new Date();
@@ -10,6 +10,11 @@ const AgeCalculator = () => {
 
     if (isNaN(birthDateObj)) {
       alert('Please enter a valid date!');
+      return;
+    }
+
+    if (birthDateObj > today) {
+      alert("Birthdate cannot be in the future!");
       return;
     }
 
@@ -41,12 +46,19 @@ const AgeCalculator = () => {
           id="birthDate"
           value={birthDate}
           onChange={(e) => setBirthDate(e.target.value)}
+          max={new Date().toISOString().split('T')[0]}
         />
       </div>
       <button onClick={calculateAge}>Calculate Age</button>
-      {age.years > 0 && (
+      {age && (
         <div className="result">
-          <p>You are <span>{age.years}</span> years, <span>{age.months}</span> months, and <span>{age.days}</span> days old, u old fart.</p>
+          <p>
+            You are <span>{age.years}</span> years, <span>{age.months}</span> months, 
+            and <span>{age.days}</span> days old.
+          </p>
+          {age.years > 50 && (
+            <p>Wow, you've got some wisdom under your belt!</p>
+          )}
         </div>
       )}
     </div>

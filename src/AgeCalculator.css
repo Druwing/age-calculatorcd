@@ -1,69 +1,164 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url("old-bearded-senior-man-with-calculator-and-bills-counting-euro-money-at-home-2J1WMW6.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/old-bearded-senior-man-with-calculator-and-bills-counting-euro-money-at-home-2J1WMW6.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.age-calculator {
+  background-color: rgba(250, 107, 107, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 12px 10px;
+  border: 2px solid #a35454;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+  background-color: #3295ff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #063a71;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.result span {
+  font-weight: bold;
+  color: #282b2e;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 430px) { 
   .age-calculator {
-    background-color: #fa6b6b;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
+      padding: 20px;
   }
   
   h1 {
-    color: #333;
-    margin-bottom: 20px;
+      font-size: 24px;
+      margin-bottom: 20px;
   }
   
-  .input-container {
-    margin-bottom: 20px;
+  input, button {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 344px) { 
+  h1 {
+      font-size: 22px;
+  }
+  
+  .age-calculator {
+      padding: 15px;
   }
   
   label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #a35454;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #3295ff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #063a71;
+      font-size: 14px;
   }
   
   .result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
+      font-size: 16px;
+      padding: 10px;
+  }
+}
+
+@media (min-width: 820px) { 
+  .age-calculator {
+      max-width: 500px;
+      padding: 30px;
   }
   
-  .result span {
-    font-weight: bold;
-    color: #282b2e;
+  h1 {
+      font-size: 32px;
   }
+  
+  input {
+      padding: 15px;
+      font-size: 18px;
+  }
+  
+  button {
+      padding: 15px;
+      font-size: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+      padding: 40px;
+  }
+  
+  .age-calculator {
+      max-width: 600px;
+      padding: 40px;
+  }
+  
+  h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+  }
+  
+  .result {
+      font-size: 20px;
+  }
+}
